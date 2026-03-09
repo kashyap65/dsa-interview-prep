@@ -1,11 +1,11 @@
 package com.kashyap.dsa.linked_list;
 
 public class ListNode {
-    int data;
+    int val;
     ListNode next;
 
-    public ListNode(int data, ListNode next) {
-        this.data = data;
+    public ListNode(int val, ListNode next) {
+        this.val = val;
         this.next = next;
     }
 }
