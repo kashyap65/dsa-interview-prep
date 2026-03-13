@@ -1,4 +1,4 @@
-package com.kashyap.dsa.sliding_window;
+package com.kashyap.dsa.prefixsum;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package com.kashyap.dsa.sliding_window;
+package com.kashyap.dsa.prefixsum;
 
 /**
  * PATTERN   : Prefix Sum (Left-Right Product Passes)
