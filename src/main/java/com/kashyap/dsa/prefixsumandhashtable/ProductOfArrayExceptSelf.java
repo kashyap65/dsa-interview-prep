@@ -1,4 +1,4 @@
-package com.kashyap.dsa.prefixsum;
+package com.kashyap.dsa.prefixsumandhashtable;
 
 /**
  * PATTERN   : Prefix Sum (Left-Right Product Passes)

@@ -1,4 +1,4 @@
-package com.kashyap.dsa.prefixsum;
+package com.kashyap.dsa.prefixsumandhashtable;
 
 import java.util.HashMap;
 
