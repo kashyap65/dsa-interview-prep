@@ -4,4 +4,8 @@ public class TreeNode {
     int val;          // the data
     TreeNode left;    // left child
     TreeNode right;   // right child
+
+    public TreeNode(int rootVal) {
+        this.val = rootVal;
+    }
 }
