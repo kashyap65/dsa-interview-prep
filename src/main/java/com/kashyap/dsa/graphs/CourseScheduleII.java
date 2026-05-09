@@ -122,29 +122,29 @@ public class CourseScheduleII {
 
         for (int i = 0; i < numCourses; i++) {
             if (states[i] == 0) {
-                if (!dfs(i, states, graph, result))
+                if (dfsHasCycle(i, states, graph, result))
                     return new int[]{};  // cycle found
             }
         }
         return result.stream().mapToInt(Integer::intValue).toArray();
     }
 
-    private boolean dfs(int course, int[] states,
-                        List<List<Integer>> graph,
-                        LinkedList<Integer> result) {
+    private boolean dfsHasCycle(int course, int[] states,
+                                List<List<Integer>> graph,
+                                LinkedList<Integer> result) {
 
         states[course] = 1;  // VISITING
 
         for (int neighbour : graph.get(course)) {
-            if (states[neighbour] == 1) return false;  // cycle
+            if (states[neighbour] == 1) return true;  // cycle
             if (states[neighbour] == 0) {
-                if (!dfs(neighbour, states, graph, result))
-                    return false;
+                if (dfsHasCycle(neighbour, states, graph, result))
+                    return true;
             }
         }
 
         states[course] = 2;           // VISITED
         result.addFirst(course);      // postorder → add to FRONT
-        return true;
+        return false;
     }
 }
